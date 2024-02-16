@@ -110,6 +110,8 @@ GameObject:
   - component: {fileID: 1007689934831225992}
   - component: {fileID: 4381259332964657480}
   - component: {fileID: 8029294642155665350}
+  - component: {fileID: 5960596049284883851}
+  - component: {fileID: 434420856255509869}
   m_Layer: 0
   m_Name: Bullet_small
   m_TagString: Untagged
@@ -253,3 +255,28 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &5960596049284883851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373222638555107088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbb73a4d95f83142b65085dc3e5604b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &434420856255509869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7373222638555107088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a569eb3e6060997418d7a25f57b9394f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
