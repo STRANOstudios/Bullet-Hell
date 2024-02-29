@@ -1,12 +1,14 @@
+using BulletHell.Spawners;
 using UnityEngine;
 
 public class DeactivateOnInvisible : MonoBehaviour
 {
-    void Update()
+    void FixedUpdate()
     {
         // Deactivate the object if it is not visible from the main camera
         if (!IsVisibleByMainCamera())
         {
+            gameObject.GetComponent<BulletController>().ResetGameObject();
             gameObject.SetActive(false);
         }
     }

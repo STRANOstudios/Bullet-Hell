@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
@@ -17,6 +18,13 @@ public class ObjectPooler : MonoBehaviour
 
     void Start()
     {
+        //InitializePool();
+    }
+
+    public void warmPool(GameObject obj, int numeber)
+    {
+        projectilePrefab = obj;
+        initialPoolSize = numeber;
         InitializePool();
     }
 
