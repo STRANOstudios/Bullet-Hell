@@ -18,7 +18,7 @@ public class ObjectPooler : MonoBehaviour
 
     void Start()
     {
-        //InitializePool();
+        InitializePool();
     }
 
     public void warmPool(GameObject obj, int numeber)

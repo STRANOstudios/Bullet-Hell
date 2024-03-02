@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ShootingManager : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private Transform[] firePoints;
     [SerializeField] private float fireRate = 0.5f;
 
@@ -18,6 +17,20 @@ public class ShootingManager : MonoBehaviour
             ShootProjectile();
         }
     }
+
+    private void OnEnable()
+    {
+        // Subscribe to the pause event
+        PowerUp.OnCollision += LayoutNumberIncrement;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the pause event
+        PowerUp.OnCollision -= LayoutNumberIncrement;
+    }
+
+    public void LayoutNumberIncrement() { if (layoutNumber < 3) layoutNumber++; }
 
     void ShootProjectile()
     {
@@ -35,7 +48,6 @@ public class ShootingManager : MonoBehaviour
                 LayoutAllPosition();
                 break;
             default:
-                Debug.LogError("Layout non gestito");
                 break;
         }
     }

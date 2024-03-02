@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 165345939582416457}
   - component: {fileID: 444089508103063006}
   - component: {fileID: 6597282677673335330}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,9 +112,9 @@ GameObject:
   - component: {fileID: 8029294642155665350}
   - component: {fileID: 5960596049284883851}
   - component: {fileID: 434420856255509869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet_small
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.125
+  m_Radius: 0.25
 --- !u!108 &4381259332964657480
 Light:
   m_ObjectHideFlags: 0

@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider == null) return;
-
-        Debug.Log("colpito");
-    }
+    public delegate void CollisionAction();
+    public static event CollisionAction OnCollision;
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("colpito");
+
+        OnCollision?.Invoke();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("PowerUp")) return;
+
+        OnCollision?.Invoke();
     }
 }
